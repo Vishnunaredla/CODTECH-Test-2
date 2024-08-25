@@ -1,0 +1,76 @@
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class VulnerabilityScanner {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Port Scanner
+        System.out.print("Enter the host to scan for open ports: ");
+        String host = scanner.nextLine();
+        System.out.print("Enter the start port: ");
+        int startPort = scanner.nextInt();
+        System.out.print("Enter the end port: ");
+        int endPort = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline
+
+        System.out.println("\nScanning for open ports...");
+        for (int port = startPort; port <= endPort; port++) {
+            if (isPortOpen(host, port)) {
+                System.out.println("Port " + port + " is open.");
+            }
+        }
+
+        // Software Version Checker
+        Map<String, String> installedSoftware = new HashMap<>();
+        installedSoftware.put("SoftwareA", "1.0");
+        installedSoftware.put("SoftwareB", "2.3");
+
+        Map<String, String> latestVersions = new HashMap<>();
+        latestVersions.put("SoftwareA", "1.2");
+        latestVersions.put("SoftwareB", "2.3");
+
+        System.out.println("\nChecking software versions...");
+        for (Map.Entry<String, String> entry : installedSoftware.entrySet()) {
+            String software = entry.getKey();
+            String installedVersion = entry.getValue();
+            String latestVersion = latestVersions.get(software);
+
+            if (latestVersion != null && !installedVersion.equals(latestVersion)) {
+                System.out.println(software + " is outdated. Installed version: " + installedVersion + ", Latest version: " + latestVersion);
+            }
+        }
+
+        // Misconfiguration Checker
+        System.out.println("\nChecking for misconfigurations...");
+        boolean isMisconfigured = checkMisconfigurations();
+
+        if (isMisconfigured) {
+            System.out.println("Misconfiguration detected.");
+        } else {
+            System.out.println("No misconfigurations detected.");
+        }
+
+        scanner.close();
+    }
+
+    private static boolean isPortOpen(String host, int port) {
+        try (Socket socket = new Socket()) {
+            socket.connect(new InetSocketAddress(host, port), 1000);
+            return true;
+        } catch (IOException e) {
+            return false;
+        }
+    }
+
+    private static boolean checkMisconfigurations() {
+        // Placeholder for actual misconfiguration checks
+        // This example assumes no misconfigurations
+        return false;
+    }
+}

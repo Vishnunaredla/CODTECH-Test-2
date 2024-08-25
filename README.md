@@ -12,7 +12,7 @@ Duration: August 1st, 2024 to September 1st, 2024
 Mentor: Muzammil Ahmed
 
 I’m excited to announce that I have successfully completed Task 2 at CODTECH IT SOLUTIONS. The project involved developing a Vulnerability Scanner Tool using Java.
-![Codtech task 2](https://github.com/user-attachments/assets/79af836d-39fe-4b65-b331-d0b57b3dfa00)
+![Task 2](https://github.com/user-attachments/assets/95435f97-58da-48f7-9dd3-63b8b7913225)
 
 
 Project Overview: Vulnerability Scanner Tool

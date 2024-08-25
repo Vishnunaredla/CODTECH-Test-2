@@ -1,9 +1,14 @@
 
 Name: N. Vishnu Vardhan
+
 Company: CodTech IT Solutions
+
 ID: CT08DS6163
+
 Domain: Cyber Security & Ethical Hacking
+
 Duration: August 1st, 2024 to September 1st, 2024
+
 Mentor: Muzammil Ahmed
 
 I’m excited to announce that I have successfully completed Task 2 at CODTECH IT SOLUTIONS. The project involved developing a Vulnerability Scanner Tool using Java.

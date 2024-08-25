@@ -60,7 +60,3 @@ Configuration Checks: Add detailed checks for misconfigurations.
 User Interface: Develop a GUI or web-based interface.
 Error Handling and Logging: Enhance with robust error handling and logging.
 This project lays the groundwork for vulnerability scanning and can be expanded into more advanced security solutions. I’m grateful for the opportunity to work on this and for the guidance from my mentor, Muzammil Ahmed.
-
-Internship Details
-
-
